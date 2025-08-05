@@ -13,7 +13,7 @@ B. Modeling
 
 2 approaches are evaluated here.
 
-  1. Using a univariate timeseries model- there is no predictor variable here. Temperature predicton is done by using temperature data itself.28 models have been tried, like auto arıma, Arıma etc. Best is selected. Considered metric is R^2.
+  1. Using a univariate timeseries model- there is no predictor variable here. Temperature predicton is done by using temperature data itself.28 models have been tried, like auto arıma, Arıma etc. Best is selected. Considered metric is R^2 and RMSE.
      
   2. Using a multivariate machine learning model, predictor variables are used. 18 models have been tried, like adaboost, random forest etc. Best is selected.           Considered metric is R^2.
      
