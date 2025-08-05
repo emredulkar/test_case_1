@@ -45,6 +45,8 @@ Several models have been tried. Best one is extra trees regressor with a R^2 val
 
 Besides the lower R^2, second approach has a disadvantage such that predicting the independent variables can make the model more noisy since we use them again to predict the dependent variable. At this stage, progressing more is not useful. Modelling study has been interrupted.
 
+As a result, the model at the first approach is selected. 
+
 
 
 
