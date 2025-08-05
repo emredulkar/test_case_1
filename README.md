@@ -15,14 +15,14 @@ B. Modeling
 
   1. Using a univariate timeseries model- there is no predictor variable here. Temperature predicton is done by using temperature data itself.28 models have been tried, like auto arıma, Arıma etc. Best is selected. Considered metric is R^2 and RMSE.
      
-  2. Using a multivariate machine learning model, predictor variables are used. 18 models have been tried, like adaboost, random forest etc. Best is selected.           Considered metric is R^2.
+  2. Using a multivariate machine learning model, predictor variables are used. 18 models have been tried, like adaboost, random forest etc. Best is selected. Considered metric is R^2.
      
 
-Although knowing the disadvantages of the second approach, an initial scan has been done by reviewing the main metrics. (here the predicting the independent variables can make the model more noisy since we use them again to predict the dependent variable.)
+Although knowing the disadvantages of the second approach, an initial scan has been done by reviewing the main metrics. (here predicting the independent variables can make the model more noisy since we use them again to predict the dependent variable.)
 
 First approach might be more straightforward using univariate time series models. For both approach, Pycaret library is used. Pycaret enables us to make a quick review of many models.
 
-First approach
+First approach - Univariate models
 
 Several univariate time series models have been compared, The top models performence are very close to each other,their MAE is almost 1 degree Celcius. since RMSE is very sensitive to peaks(droughts) and bottom, the lowest RMSE value is of Elastic Net w/ Cond. Deseasonalize & Detrending model(and the highest R^2 which is 0.9664), so it has been selected for further analysis.
 
@@ -37,6 +37,13 @@ Finally 36 months forecasted graph is presented.
 
 <img width="1300" height="506" alt="image" src="https://github.com/user-attachments/assets/24cc7fcc-ecbf-4696-a171-75fea0330399" />
 
+Second approach - Multivariate models
+
+Several models have been tried. Best one is extra trees regressor with a R^2 value of 0.8010. Comparing to the first approach this is significantly low.
+
+<img width="822" height="642" alt="image" src="https://github.com/user-attachments/assets/28d630a7-61a7-4a3a-95fc-6f605c769031" />
+
+Besides the lower R^2, second approach has a disadvantage such that predicting the independent variables can make the model more noisy since we use them again to predict the dependent variable. At this stage, progressing more is not useful. Modelling study has been interrupted.
 
 
 
